@@ -1,0 +1,15 @@
+class Solution {
+    public double solution(long n) {
+        double answer = 0;
+        
+        double sqrt = Math.sqrt(n); // 제곱근
+        System.out.println(sqrt);
+        if (sqrt - (int)sqrt > 0){
+            answer = -1;
+        }
+        else{
+            answer = Math.pow(sqrt+1, 2); //sqrt-1의 제곱   
+        }
+        return answer;
+    }
+}
