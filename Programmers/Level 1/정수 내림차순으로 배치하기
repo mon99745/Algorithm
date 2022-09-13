@@ -1,0 +1,11 @@
+import java.util.*;
+class Solution {
+    public long solution(long n) {
+        String str = String.valueOf(n); //n을 string으로 
+        char[] s = str.toCharArray();// str을 한자리씩 char array에 저장
+        Arrays.sort(s);//오름차순
+        String sb = new StringBuilder(new String(s)).reverse().toString();
+        //내림차순    
+        return Long.parseLong(sb);//long type으로 return
+    }
+}
