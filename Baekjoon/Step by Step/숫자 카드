@@ -1,0 +1,39 @@
+// 시간 초과 
+import java.util.*;
+import java.io.*;
+public class Main{
+    public static void main(String[] args) throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringTokenizer st;
+        
+        int N = Integer.parseInt(br.readLine()); // 상근의 카드 개수 
+        int[] arr1 = new int[N]; // 상근의 카드 숫자
+        
+        st = new StringTokenizer(br.readLine());
+        
+        for(int i=0; i<arr1.length; i++){
+            arr1[i] = Integer.parseInt(st.nextToken());
+        }
+
+        int M = Integer.parseInt(br.readLine()); // 판별 카드 갯수
+        int[] arr2 = new int[M]; // 판별 카드 숫자 
+        
+        st = new StringTokenizer(br.readLine());
+        
+        for(int i=0; i<arr2.length; i++){
+            arr2[i] = Integer.parseInt(st.nextToken());
+        }
+        
+        for(int x=0; x<arr2.length; x++){ // 판별 카드 숫자
+            int count = 0; 
+            for(int y=0; y<arr1.length; y++){ // 상근 카드 숫자
+                if(arr1[y] == arr2[x]) count++;
+            }
+            System.out.println(count+" ");
+        }
+    }
+}
+                 
+            
+            
+            
