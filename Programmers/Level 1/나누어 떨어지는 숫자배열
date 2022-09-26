@@ -1,0 +1,28 @@
+import java.util.*;
+class Solution {
+    public int[] solution(int[] arr, int divisor) {
+        int[] answer = {};
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        
+        // 리턴 값이 없을때 -1을 반환하기 위함
+        int count = 0; 
+        
+        for(int i=0; i<arr.length; i++){
+            if(arr[i] % divisor == 0){
+                list.add(arr[i]);
+                count++;
+            }
+        }
+        if(count == 0) list.add(-1);
+        else Collections.sort(list);
+        
+        answer = new int[list.size()];
+          
+        for(int i=0; i<list.size(); i++) {
+            answer[i] = list.get(i);
+        }
+        
+        return answer;
+    }
+}
+        
